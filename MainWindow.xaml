@@ -1,0 +1,70 @@
+﻿<Window x:Class="FileRenamerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileRenamerWPF"
+        mc:Ignorable="d"
+        Title="Переименовать файлы" Height="350" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="10">
+            <DockPanel LastChildFill="False">
+                <Label Name="lblPathCaption" Content="Путь к файлам:" DockPanel.Dock="Left"></Label>
+                <TextBlock Name="txtPathValue" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto">dfdf</TextBlock>
+                <Button Content="Выбрать путь" DockPanel.Dock="Right" Width="100"></Button>
+            </DockPanel>
+        </StackPanel>
+
+        <TreeView Name="trvHierarchy" Grid.Row="1">
+            <TreeView.ItemContainerStyle>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    <Setter Property="IsExpanded" Value="{Binding IsExpanded}" />
+                </Style>
+            </TreeView.ItemContainerStyle>
+
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate DataType="{x:Type local:FileSystemNode}" ItemsSource="{Binding ObservableChildren}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Name}" Grid.Column="0" />
+                        <TextBlock Text="{Binding NewName}" Grid.Column="1" HorizontalAlignment="Right"/>
+                    </Grid>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+
+        <StatusBar Grid.Row="2" Name="statBarProgress">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition MinWidth="150"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem Grid.Column="2">
+                <ProgressBar Name="progressValue" Value="66" Minimum="0" Maximum="100" Width="150" Height="30">
+
+                </ProgressBar>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="2">
+                <TextBlock Name="txtProgressValue" Width="150" HorizontalAlignment="Center" TextAlignment="Center">ddddd</TextBlock>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

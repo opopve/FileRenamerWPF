@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileRenamerWPF", "FileRenamerWPF.csproj", "{C7100B8A-924B-4F8C-AAC0-FB4FF007FD48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilesRenamer", "..\FilesRenamer\FilesRenamer.csproj", "{5CBC67D0-7BAE-4315-B979-B8D7680EEA9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7100B8A-924B-4F8C-AAC0-FB4FF007FD48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7100B8A-924B-4F8C-AAC0-FB4FF007FD48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7100B8A-924B-4F8C-AAC0-FB4FF007FD48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7100B8A-924B-4F8C-AAC0-FB4FF007FD48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CBC67D0-7BAE-4315-B979-B8D7680EEA9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CBC67D0-7BAE-4315-B979-B8D7680EEA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CBC67D0-7BAE-4315-B979-B8D7680EEA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CBC67D0-7BAE-4315-B979-B8D7680EEA9A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08F21107-53E0-4D0B-BDB9-BD678851A901}
+	EndGlobalSection
+EndGlobal
